@@ -1,10 +1,19 @@
-import { Tabs } from "expo-router"
+import { Tabs } from "expo-router";
+import { SafeAreaView } from "react-native";
 
 const TabsLayout = () => {
-    return 
-    <Tabs>
-        <Tabs.Screen name='index' options={{}}/>
-    </Tabs>
-}
+  return (
+    <SafeAreaView>
+      <Tabs>
+        <Tabs.Screen 
+            name="index" options={{headerShown: false}} 
+        />
+        <Tabs.Screen
+            name="orders" options={{headerShown: false}}
+        />
+      </Tabs>
+    </SafeAreaView>
+  );
+};
 
-export default TabsLayout
+export default TabsLayout;
